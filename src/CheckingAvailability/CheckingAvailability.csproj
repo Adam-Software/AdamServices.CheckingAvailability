@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Version>0.0.1</Version>
+    <IsPackable>false</IsPackable>
+    <Title>$(SolutionName)</Title>
+    <Authors>vertigra</Authors>
+    <Product>$(SolutionName)</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CheckingAvailability.Interface\CheckingAvailability.Interface.csproj" />
+    <ProjectReference Include="..\CheckingAvailability.Services\CheckingAvailability.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

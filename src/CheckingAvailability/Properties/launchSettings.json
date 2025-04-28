@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CheckingAvailability": {
+      "commandName": "Project",
+      "commandLineArgs": "-o 12000 -n 19000"
+    }
+  }
+}
