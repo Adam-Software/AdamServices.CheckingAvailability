@@ -38,10 +38,9 @@ namespace CheckingAvailability
                         Logger logger = new LoggerConfiguration()
                             .ReadFrom.Configuration(context.Configuration)
                             .CreateLogger();
-
-                    loggingBuilder.ClearProviders();
-                    loggingBuilder.AddSerilog(logger, dispose: true);
-                    
+                        
+                        loggingBuilder.ClearProviders();
+                        loggingBuilder.AddSerilog(logger, dispose: true);
                     });
                     
                     services.AddAdamServiceFileCreator();
