@@ -16,8 +16,7 @@ env:
   VERSION: 1.0.0
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   PROJECT_NAME: CheckingAvailability
-  PROJECT_PATH: "src/$PROJECT_NAME"
-
+  
 jobs:
   build:
 
@@ -31,6 +30,9 @@ jobs:
       env:
         TAG: ${{ github.ref_name }}
       run: echo "VERSION=${TAG#v.}" >> $GITHUB_ENV
+
+    - name: Set Project Path
+      run: echo "src/$PROJECT_NAME" >> $PROJECT_PATH
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
