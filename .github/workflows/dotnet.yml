@@ -15,7 +15,7 @@ on:
 env:
   VERSION: 1.0.0
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PROJECT_NAME: CheckingAvailability
+  #PROJECT_NAME: CheckingAvailability
   
 jobs:
   build:
@@ -31,8 +31,8 @@ jobs:
         TAG: ${{ github.ref_name }}
       run: echo "VERSION=${TAG#v.}" >> $GITHUB_ENV
 
-    - name: Set Project Path
-      run: echo "src/${ env.PROJECT_NAME }" >> $PROJECT_PATH
+    #- name: Set Project Path
+    #  run: echo "src/${( env.PROJECT_NAME }" >> $PROJECT_PATH
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -41,8 +41,8 @@ jobs:
         
     - name: Publish
       run: | 
-        dotnet publish $PROJECT_PATH --output publish/arm64 -c Release --self-contained true --runtime linux-arm64 -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:Version=$VERSION 
-        dotnet publish $PROJECT_PATH --output publish/win64 -c Release --self-contained true --runtime win-x64 -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:Version=$VERSION 
+        dotnet publish --output publish/arm64 -c Release --self-contained true --runtime linux-arm64 -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:Version=$VERSION 
+        dotnet publish --output publish/win64 -c Release --self-contained true --runtime win-x64 -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:Version=$VERSION 
   
     - name: Zip arm64 release
       uses: vimtor/action-zip@v1.2
