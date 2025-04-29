@@ -30,9 +30,6 @@ jobs:
       env:
         TAG: ${{ github.ref_name }}
       run: echo "VERSION=${TAG#v.}" >> $GITHUB_ENV
-
-    #- name: Set Project Path
-    #  run: echo "src/${( env.PROJECT_NAME }" >> $PROJECT_PATH
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -49,14 +46,14 @@ jobs:
       with:
         files: publish/arm64
         recursive: true
-        dest: $PROJECT_NAME.arm64.portable.zip
+        dest: "${{ env.PROJECT_NAME }}.arm64.portable.zip"
     
     - name: Zip win64 release
       uses: vimtor/action-zip@v1.2
       with:
         files: publish/win64
         recursive: true
-        dest: $PROJECT_NAME.win64.portable.zip
+        dest: "${{ env.PROJECT_NAME }}.win64.portable.zip"
 
     - name: Publish Release
       uses: "slord399/action-automatic-releases@v1.0.1"
