@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckingAvailability.Servic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "package_description", "package_description", "{983A809E-D733-4751-A59E-042AE0E2AB3E}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		service_info.json = service_info.json
 	EndProjectSection
 EndProject
