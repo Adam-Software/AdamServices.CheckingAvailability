@@ -32,7 +32,7 @@ jobs:
       run: echo "VERSION=${TAG#v.}" >> $GITHUB_ENV
 
     - name: Set Project Path
-      run: echo "src/${ PROJECT_NAME }" >> $PROJECT_PATH
+      run: echo "src/${ env.PROJECT_NAME }" >> $PROJECT_PATH
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
