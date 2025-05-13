@@ -1,6 +1,4 @@
 ﻿using CheckingAvailability.Interface;
-using CommandLine;
-using System;
 
 namespace CheckingAvailability.Services
 {
