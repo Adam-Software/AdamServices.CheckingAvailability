@@ -12,12 +12,10 @@ Use the shared [wiki](https://github.com/Adam-Software/AdamServices.Utilities.Ma
 * **Windows [x64]**
   ```
   https://github.com/Adam-Software/AdamServices.CheckingAvailability/releases/latest/download/CheckingAvailability.win64.portable.zip
-
   ```
 * **Linux [arm64]**
   ```
   https://github.com/Adam-Software/AdamServices.CheckingAvailability/releases/latest/download/CheckingAvailability.arm64.portable.zip
-
   ```
 
 ### Install
@@ -30,7 +28,7 @@ Use the shared [wiki](https://github.com/Adam-Software/AdamServices.Utilities.Ma
     ```bash
     wget https://github.com/Adam-Software/AdamServices.CheckingAvailability/releases/latest/download/CheckingAvailability.arm64.portable.zip
     ```
-  * Unzip and make the Management file executable
+  * Unzip and make the CheckingAvailability file executable
     ```bash
     unzip CheckingAvailability.arm64.portable.zip -d CheckingAvailability && chmod +x CheckingAvailability/CheckingAvailability
     ```
